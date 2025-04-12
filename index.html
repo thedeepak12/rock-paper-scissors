@@ -10,14 +10,22 @@
     <h1>ROCK - PAPER - SCISSORS</h1>
 
     <div class="choices">
-        <button onclick="handleButtonClick('rock')">👊</button>
-        <button onclick="handleButtonClick('paper')">✋</button>
-        <button onclick="handleButtonClick('scissors')">✌</button>
+        <button onclick="handleButtonClick('Rock')">👊</button>
+        <button onclick="handleButtonClick('Paper')">✋</button>
+        <button onclick="handleButtonClick('Scissors')">✌</button>
     </div>
 
     <div id="humanDisplay">HUMAN CHOICE: </div>
     <div id="computerDisplay">COMPUTER CHOICE: </div>
     <div id="resultDisplay"></div>
+
+    <div class="scoreDisplay">Human Score: 
+        <span id="humanScoreDisplay">0</span>
+    </div>
+    <div class="scoreDisplay">Computer Score: 
+        <span id="computerScoreDisplay">0</span>
+    </div>
+
 
     <script src="script.js"></script>
 </body>

@@ -1,9 +1,15 @@
 let humanDisplay = document.getElementById("humanDisplay");
 let computerDisplay = document.getElementById("computerDisplay");
 let resultDisplay = document.getElementById("resultDisplay");
+let humanScoreDisplay = document.getElementById("humanScoreDisplay");
+let computerScoreDisplay = document.getElementById("computerScoreDisplay");
+
+let humanScore = 0;
+let computerScore = 0;
+
 
 function getComputerChoice() {
-    const choices = ["rock", "paper", "scissors"];
+    const choices = ["Rock", "Paper", "Scissors"];
     const computerChoice = choices[Math.floor(Math.random() * 3)];
     return computerChoice;
 }
@@ -19,14 +25,14 @@ function playRound(humanChoice, computerChoice) {
     }
     else {
         switch (humanChoice) {
-            case "rock":
-                result = (computerChoice === "scissors") ? "You win! Rock beats Scissors" : "You lose! Paper beats Rock";
+            case "Rock":
+                result = (computerChoice === "Scissors") ? "You win! Rock beats Scissors" : "You lose! Paper beats Rock";
                 break;
-            case "paper":
-                result = (computerChoice === "rock") ? "You win! Paper beats Rock" : "You lose! Scissors beats Paper";
+            case "Paper":
+                result = (computerChoice === "Rock") ? "You win! Paper beats Rock" : "You lose! Scissors beats Paper";
                 break;
-            case "scissors":
-                result = (computerChoice === "paper") ? "You win! Scissors beats Paper" : "You lose! Rock beats Scissors";
+            case "Scissors":
+                result = (computerChoice === "Paper") ? "You win! Scissors beats Paper" : "You lose! Rock beats Scissors";
                 break;
         }
     }
@@ -39,9 +45,13 @@ function playRound(humanChoice, computerChoice) {
 
     if (result === "You win! Rock beats Scissors" || result === "You win! Paper beats Rock" || result === "You win! Scissors beats Paper") {
         resultDisplay.classList.add("greenText");
+        humanScore++;
+        humanScoreDisplay.textContent = humanScore;
     }
     else if (result === "You lose! Paper beats Rock" || result === "You lose! Scissors beats Paper" || result === "You lose! Rock beats Scissors") {
         resultDisplay.classList.add("redText");
+        computerScore++;
+        computerScoreDisplay.textContent = computerScore;
     }
     else if (result === "IT'S A TIE!") {
         resultDisplay.classList.add("yellowText");
