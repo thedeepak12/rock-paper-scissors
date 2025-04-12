@@ -34,6 +34,18 @@ function playRound(humanChoice, computerChoice) {
     humanDisplay.textContent = `Human: ${humanChoice}`;
     computerDisplay.textContent = `Computer: ${computerChoice}`;
     resultDisplay.textContent = result;
+
+    resultDisplay.classList.remove("greenText", "redText", "yellowText");
+
+    if (result === "You win! Rock beats Scissors" || result === "You win! Paper beats Rock" || result === "You win! Scissors beats Paper") {
+        resultDisplay.classList.add("greenText");
+    }
+    else if (result === "You lose! Paper beats Rock" || result === "You lose! Scissors beats Paper" || result === "You lose! Rock beats Scissors") {
+        resultDisplay.classList.add("redText");
+    }
+    else if (result === "IT'S A TIE!") {
+        resultDisplay.classList.add("yellowText");
+    }
 }
 
 function handleButtonClick(humanChoice) {
