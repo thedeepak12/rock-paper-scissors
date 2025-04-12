@@ -1,7 +1,6 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,11 +35,25 @@ h1 {
 
 #resultDisplay {
     font-size: 3.4rem;
-    margin: 30px 0;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 .scoreDisplay {
     font-size: 2rem;
+    margin-top: 10px;
+}
+
+#computerScoreDisplay {
+    padding-bottom: 50px;
+}
+
+#playAgainButton {
+    margin-top: 5px;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 .greenText, #humanScoreDisplay {
@@ -48,7 +61,7 @@ h1 {
 }
 
 .yellowText {
-    color: hsl(60, 84%, 54%);
+    color: hsl(60, 84%, 50%);
 }
 
 .redText, #computerScoreDisplay {

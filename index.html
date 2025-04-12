@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>ROCK - PAPER - SCISSORS</h1>
+    <h1>ROCK PAPER SCISSORS</h1>
 
     <div class="choices">
         <button onclick="handleButtonClick('Rock')">👊</button>
@@ -19,13 +19,15 @@
     <div id="computerDisplay">COMPUTER CHOICE: </div>
     <div id="resultDisplay"></div>
 
+    <button id="playAgainButton" onclick="resetGame()" style="display: none;">Play Again</button>
+
+
     <div class="scoreDisplay">Human Score: 
         <span id="humanScoreDisplay">0</span>
     </div>
     <div class="scoreDisplay">Computer Score: 
         <span id="computerScoreDisplay">0</span>
     </div>
-
 
     <script src="script.js"></script>
 </body>
