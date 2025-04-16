@@ -2,10 +2,6 @@
 
 This project is a web-based **Rock Paper Scissors** game where players can compete against the computer in a fun, interactive match. Built with HTML, CSS, and JavaScript, the game features a clean interface, score tracking, and a five-round limit to determine the winner.
 
-### Live Demo
-Check out the live version of this project [here](https://thedeepak12.github.io/rock-paper-scissors/)!
-
-
 ### Key Features
 - **Interactive Buttons**: Large, emoji-based buttons for selecting Rock, Paper, or Scissors.
 - **Real-Time Feedback**: Displays the player’s choice, computer’s choice, and round result.
